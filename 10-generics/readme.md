@@ -18,3 +18,6 @@ To gix this remove the return type->
 Protected and inheritance ->
 We cannot use a private properties and methods in another class which inherits its properties and methods.
 We can do the above mentioned thing using "protected". i.e., we can access the protected properties and methods in the class which extends the parent class.
+
+
+<T,> we put this comma in the generic tag in react projects so that developers are not confused that it is a html or jsx code

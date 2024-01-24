@@ -40,9 +40,53 @@
 
 
 // getters and setters ->
+// class User {
+
+//   private _courseCount = 1;
+
+//   readonly city: string = "Udaipur";
+
+//   constructor(
+//     public email: string,
+//     public name: string
+//   ) // private userId: string,
+//   {
+//     this.deleteToken()
+//   }
+
+//   // private methods ->
+//   private deleteToken() {
+//     console.log("Token Deleted");
+//   }
+
+//   // get and set ->
+
+//   get getAppleEmail(): string {
+//     return `apple.${this.email}`;
+//   }
+
+//   get courseCount(): number {
+//     return this._courseCount;
+//   }
+
+//   set courseCount(courseNumber) {
+//     if(courseNumber <= 1) {
+//       throw new Error("Course count should be more than 1");
+//     }
+//     this._courseCount = courseNumber
+//   }
+// }
+
+// const Mehul = new User("m@m.com", "raju");
+
+
+
+
+// Protected class->
+
 class User {
 
-  private _courseCount = 1;
+  protected _courseCount = 1;
 
   readonly city: string = "Udaipur";
 
@@ -74,6 +118,15 @@ class User {
       throw new Error("Course count should be more than 1");
     }
     this._courseCount = courseNumber
+  }
+}
+
+// below is inheritance
+class SubUser extends User {
+  isFamily: boolean = true;
+
+  changeCourseCount() {
+    this._courseCount = 4
   }
 }
 
